@@ -15,6 +15,21 @@ export default function Form(){
         return setBmi( (weight/(height**2)).toFixed(2) );
     }
 
+    const validateValues = () => {
+        if(height != null && weight != null){
+            setMessage("Your BMI is")
+            calculateBmi();
+            setHeight(null);
+            setWeight(null);
+            setTextButton("Calculate again")
+        }
+        else {
+            setTextButton("Calculate");
+            setMessage("Fill out the weight and height fields");
+            setBmi(null);
+        }
+    }
+
     return (
         <View>
            <View>
