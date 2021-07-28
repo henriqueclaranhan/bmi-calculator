@@ -11,6 +11,10 @@ export default function Form(){
     const [bmi, setBmi] = useState(null);
     const [textButton, setTextButton] = useState("Calculate");
 
+    const calculateBmi = () => {
+        return setBmi( (weight/(height**2)).toFixed(2) );
+    }
+
     return (
         <View>
            <View>
