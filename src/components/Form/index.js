@@ -12,7 +12,7 @@ export default function Form(){
                <TextInput placeholder="e.g. 80" keyboardType="numeric" />
                <Button title="Calculate"/>
            </View>
-           <BmiResult bmiResultMessage={message} bmiResult={imc}/>
+           <BmiResult bmiResultMessage={message} bmiResult={bmi}/>
         </View>
     );
 }
