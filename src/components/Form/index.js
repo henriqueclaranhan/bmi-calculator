@@ -1,6 +1,6 @@
 import { func } from 'prop-types';
 import React, { useState } from 'react';
-import { View, Text, TextInput, Button } from 'react-native';
+import { View, Text, TextInput, Button, Keyboard } from 'react-native';
 import BmiResult from './BmiResult';
 
 export default function Form(){
@@ -9,7 +9,6 @@ export default function Form(){
     const [weight, setWeight] = useState(null);
     const [message, setMessage] = useState("Fill out the weight and height fields");
     const [bmi, setBmi] = useState(null);
-    const [textButton, setTextButton] = useState("Calculate");
 
     const calculateBmi = () => {
         return setBmi( (weight/(height**2)).toFixed(2) );
@@ -21,10 +20,9 @@ export default function Form(){
             calculateBmi();
             setHeight(null);
             setWeight(null);
-            setTextButton("Calculate again")
+            Keyboard.dismiss();
         }
         else {
-            setTextButton("Calculate");
             setMessage("Fill out the weight and height fields");
             setBmi(null);
         }
@@ -34,10 +32,10 @@ export default function Form(){
         <View>
            <View>
                <Text>Height</Text>
-               <TextInput placeholder="e.g. 1.70" keyboardType="numeric" />
+               <TextInput onChangeText={setHeight} value={height} placeholder="e.g. 1.70" keyboardType="numeric" />
                <Text>Weight</Text>
-               <TextInput placeholder="e.g. 80" keyboardType="numeric" />
-               <Button title={textButton}/>
+               <TextInput onChangeText={setWeight} value={weight} placeholder="e.g. 80" keyboardType="numeric" />
+               <Button title="Calculate" onPress={ () => { validateValues() } } />
            </View>
            <BmiResult bmiResultMessage={message} bmiResult={bmi}/>
         </View>
