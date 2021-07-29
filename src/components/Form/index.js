@@ -1,4 +1,3 @@
-import { func } from 'prop-types';
 import React, { useState } from 'react';
 import { View, Text, TextInput, Button, Keyboard } from 'react-native';
 import BmiResult from './BmiResult';
