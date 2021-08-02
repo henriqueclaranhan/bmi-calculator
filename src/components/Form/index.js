@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { View, Text, TextInput, TouchableOpacity, Keyboard } from 'react-native';
 import BmiResult from './BmiResult';
+import styles from './style';
 
 export default function Form(){
 
@@ -28,14 +29,19 @@ export default function Form(){
     }
 
     return (
-        <View>
-           <View>
-               <Text>Height</Text>
-               <TextInput onChangeText={setHeight} value={height} placeholder="e.g. 1.70" keyboardType="numeric" />
-               <Text>Weight</Text>
-               <TextInput onChangeText={setWeight} value={weight} placeholder="e.g. 80" keyboardType="numeric" />
-               <TouchableOpacity title="Calculate" onPress={ () => { validateValues() } } />
+        <View style={styles.content}>
+           <View style={styles.form}>
+               <Text style={styles.formLabel}>Height</Text>
+               <Text style={styles.labelHint}>in m</Text>
+               <TextInput style={styles.formInput} onChangeText={setHeight} value={height} placeholder="e.g. 1.70" keyboardType="numeric" />
+
+               <Text style={styles.formLabel}>Weight</Text>
+               <Text style={styles.labelHint}>in kg</Text>
+               <TextInput style={styles.formInput} onChangeText={setWeight} value={weight} placeholder="e.g. 80" keyboardType="numeric" />
            </View>
+           <TouchableOpacity style={styles.calculateButton} onPress={ () => { validateValues() } }>
+                <Text style={styles.calculateButtonText}>Calculate</Text>
+           </TouchableOpacity>
            <BmiResult bmiResultMessage={message} bmiResult={bmi}/>
         </View>
     );
