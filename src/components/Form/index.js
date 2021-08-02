@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { View, Text, TextInput, Button, Keyboard } from 'react-native';
+import { View, Text, TextInput, TouchableOpacity, Keyboard } from 'react-native';
 import BmiResult from './BmiResult';
 
 export default function Form(){
@@ -34,7 +34,7 @@ export default function Form(){
                <TextInput onChangeText={setHeight} value={height} placeholder="e.g. 1.70" keyboardType="numeric" />
                <Text>Weight</Text>
                <TextInput onChangeText={setWeight} value={weight} placeholder="e.g. 80" keyboardType="numeric" />
-               <Button title="Calculate" onPress={ () => { validateValues() } } />
+               <TouchableOpacity title="Calculate" onPress={ () => { validateValues() } } />
            </View>
            <BmiResult bmiResultMessage={message} bmiResult={bmi}/>
         </View>
