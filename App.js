@@ -23,7 +23,7 @@ export default function App() {
 	  else {
 		return (
 			<View style={styles.container}>
-				<StatusBar style="dark" />
+				<StatusBar backgroundColor="#08244b" barStyle="default" />
 				<Title />
 				<Form />
 			</View>
