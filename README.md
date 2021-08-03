@@ -16,9 +16,9 @@
 ## :iphone: About The Project
 <div align="center">
     <a href="https://github.com/henriqueclaranhan/bmi-calculator">
-        <img width="24%" src="https://github.com/henriqueclaranhan/bmi-calculator/blob/main/images/app-screenshot-1.jpg">
+        <img width="40%" src="https://github.com/henriqueclaranhan/bmi-calculator/blob/main/images/app-screenshot-1.jpg">
         &nbsp;&nbsp;
-        <img width="24%" src="https://github.com/henriqueclaranhan/bmi-calculator/blob/main/images/app-screenshot-2.jpg">
+        <img width="40%" src="https://github.com/henriqueclaranhan/bmi-calculator/blob/main/images/app-screenshot-2.jpg">
     </a>
 </div>
 
