@@ -28,6 +28,14 @@ const styles = StyleSheet.create({
         fontFamily: "Poppins-Regular",
         fontSize: 15,
     },
+    labelErrorMessage: {
+        height: 17,
+        marginTop: 3,
+        marginLeft: 3,
+        color: "#ff2950",
+        fontFamily: "Poppins-Medium",
+        fontSize: 14,
+    },
     formInput: {
         width: "100%",
         height: 43,
