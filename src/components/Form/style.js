@@ -2,21 +2,20 @@ import { StyleSheet } from 'react-native';
 
 const styles = StyleSheet.create({
     content: {
-        position: "absolute",
+        position: "relative",
         width: "100%",
-        height: "100%",
+        flex: 1,
         flexDirection: "column",
         alignItems: "center",
-        justifyContent: "center",
+        justifyContent: "center"
     },
     form: {
-        marginTop: 45,
         width: "85%",
         height: "auto",
     },
     formLabel: {
         color: "#08244b",
-        marginTop: 20,
+        marginTop: 10,
         marginLeft: 7,
         fontFamily: "Poppins-Medium",
         fontSize: 19,
